@@ -1,0 +1,14 @@
+{
+    "name": "tennis",
+    "private": true,
+    "scripts": {
+      "dev": "concurrently \"npm run dev:front\" \"npm run dev:back\"",
+      "dev:front": "cd apps/frontend && npm run dev",
+      "dev:back": "cd apps/backend && symfony serve",
+      "install:all": "npm run install:front && composer install -d apps/backend",
+      "install:front": "cd apps/frontend && npm install"
+    },
+    "devDependencies": {
+      "concurrently": "^8.0.0"
+    }
+  }
